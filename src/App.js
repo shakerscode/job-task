@@ -3,7 +3,9 @@ import Card from './components/Card';
 import Modal from './components/Modal';
 
 const App = () => {
-  const [inputValue, setInputValue] = useState('')
+  const [yearValue, setYearValue] = useState('')
+  const [catValue, setCatValue] = useState('')
+  const [searchValue, setSearchValue] = useState('')
   const [products, setProduct] = useState([])
   const [openModal, setOpenModal] = useState(false)
   fetch('data.json').then(res => res.json()).then(data => setProduct(data))
@@ -12,12 +14,15 @@ const App = () => {
     setOpenModal(product) 
   }
 
-// console.log(inputValue);
+// console.log(searchValue);
 
   return (
     <div>
       <header className='header'>
-        <input type="search" name="" id="" />
+        <input 
+        onChange={(e) => setSearchValue(e.target.value)}
+        type="search" 
+        placeholder='Search product' />
         <button>Search</button>
       </header>
       <main className='main-div'>
@@ -27,13 +32,13 @@ const App = () => {
           </div>
           <div className='filter-section'>
             <p>Filter by Year</p>
-            <label><input onChange={(e) => setInputValue(e.target.value)} type="checkbox" value='2022'/>2022</label>
-            <label><input onChange={(e) => setInputValue(e.target.value)} type="checkbox" value='2021'/>2021</label>
-            <label><input onChange={(e) => setInputValue(e.target.value)} type="checkbox" value='2020'/>2020</label>  
+            <label><input onChange={(e) => setYearValue(e.target.value)} type="checkbox" value='2022'/>2022</label>
+            <label><input onChange={(e) => setYearValue(e.target.value)} type="checkbox" value='2021'/>2021</label>
+            <label><input onChange={(e) => setYearValue(e.target.value)} type="checkbox" value='2020'/>2020</label>  
             <p>Filter by Category</p>
-            <label><input onChange={(e) => setInputValue(e.target.value)} type="checkbox" value='shoes'/>Shoes</label>
-            <label><input onChange={(e) => setInputValue(e.target.value)} type="checkbox" value='t-shirt'/>T-shirt</label>
-            <label><input onChange={(e) => setInputValue(e.target.value)} type="checkbox" value='pant'/>Pant</label> 
+            <label><input onChange={(e) => setCatValue(e.target.value)} type="checkbox" value='shoes'/>Shoes</label>
+            <label><input onChange={(e) => setCatValue(e.target.value)} type="checkbox" value='t-shirt'/>T-shirt</label>
+            <label><input onChange={(e) => setCatValue(e.target.value)} type="checkbox" value='pant'/>Pant</label> 
           </div>
         </section>
         <section className=''>
