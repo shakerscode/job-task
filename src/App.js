@@ -12,9 +12,8 @@ const App = () => {
 
   const handleDetails = (product) =>{
     setOpenModal(product) 
-  }
+  } 
 
-// console.log(searchValue);
 
   return (
     <div>

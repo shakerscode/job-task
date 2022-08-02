@@ -38,7 +38,23 @@
       "brand": "rebook",
       "size": "large",
       "price": "1000",
-      "year": "2020"
+      "year": "2020" 
+    },{
+      "name": "Product 6",
+      "image": "https://img.freepik.com/free-psd/top-view-polo-shirt-mockup_23-2149360099.jpg",
+      "category": "T-shirt",
+      "brand": "rebook",
+      "size": "large",
+      "price": "1000",
+      "year": "2022" 
+    },{
+      "name": "Product 7",
+      "image": "https://img.freepik.com/free-photo/pile-jeans_144627-848.jpg",
+      "category": "Pant",
+      "brand": "rebook",
+      "size": "large",
+      "price": "1000",
+      "year": "2021"
     }
   ]
   
